@@ -10,6 +10,7 @@ type Project struct {
 	GroupId       string `xml:"groupId"`
 	ArtifactId    string `xml:"artifactId"`
 	Version       string `xml:"version"`
+	Packaging     string `xml:"packaging"`
 }
 
 func decodePom(file string, p Project) {
@@ -22,6 +23,7 @@ func decodePom(file string, p Project) {
 	fmt.Println(p.GroupId)
 	fmt.Println(p.ArtifactId)
 	fmt.Println(p.Version)
+	fmt.Println(p.Packaging)
 }
 
 func main() {
